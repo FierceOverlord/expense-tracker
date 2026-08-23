@@ -1,3 +1,4 @@
+from datetime import datetime
 
 class Analytics:
     def __init__(self, expenses):
@@ -15,8 +16,24 @@ class Analytics:
         
         return sum(expense.amount for expense in self.expenses) / len(self.expenses)
 
-    def calculate_by_category():
-        return
+    def calculate_by_category(self):
+        category_totals = {}
 
-    def calculate_by_month_year():
-        return
+        for expense in self.expenses:
+            category_totals[expense.category] = (
+                category_totals.get(expense.category, 0) + expense.amount
+            )
+        return category_totals
+
+    def calculate_by_month_year(self):
+        month_total = {}
+
+        for expense in self.expenses:
+            date = datetime.strptime(expense.date, '%Y-%m-%d')
+            month_year = date.strftime('%Y-%m')
+
+            month_total[month_year] = (
+                month_total.get(month_year, 0) + expense.amount
+            ) 
+
+        return month_total
