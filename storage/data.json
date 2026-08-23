@@ -1,0 +1,14 @@
+[
+    {
+        "title": "New Laptop",
+        "amount": 90000.0,
+        "category": "Electronics",
+        "date": "2026-11-10"
+    },
+    {
+        "title": "October trip",
+        "amount": 15000.0,
+        "category": "Travel",
+        "date": "2026-10-4"
+    }
+]
