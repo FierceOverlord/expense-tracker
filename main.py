@@ -1,14 +1,26 @@
-from storage.storage import Storage
+from storage.storage_factory import StorageFactory
 from manager.expense_manager import Expense_Manager
 from utilities.validators import get_choice
 from constants.Constants import METHODS
+from tkinter import filedialog
 
-storage = Storage("data.json")
+
+filePath = filedialog.askopenfilename(
+    title = "Open Expense File",
+    filetypes=[
+        ("Expense Files", "*.json *.csv"),
+        ("JSON Files", "*.json"),
+        ("CSV Files", "*.csv")
+    ]
+)
+
+storage = StorageFactory.create(filePath)
+
 manager = Expense_Manager(storage)
 
 
 while True:
-    print("""
+        print("""
 === Welcome to Expense Tracker ===
 1. Add Expense
 2. View Expenses
@@ -18,14 +30,15 @@ while True:
 6. Filter by category
 """)
 
-    try:
-       
-       get_choice(METHODS, manager)
+        try:
+        
+            get_choice(METHODS, manager)
 
-    except ValueError as e:
-        print(f"Error: {e}")
+        except ValueError as e:
+            print(f"Error: {e}")
 
-    cont = input("Do you want to continue (y/n): ").lower()
+        cont = input("Do you want to continue (y/n): ").lower()
 
-    if cont != 'y':
-        break
+        if cont != 'y':
+            break
+

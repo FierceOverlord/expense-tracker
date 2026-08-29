@@ -1,6 +1,6 @@
 from models.expense import Expense
 from datetime import datetime
-from analytics import Analytics
+from manager.analytics import Analytics
 from utilities.errorHandlers import handle_errors
 from utilities.validators import *
 from utilities.resultFormat import print_format
