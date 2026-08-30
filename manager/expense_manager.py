@@ -5,11 +5,13 @@ from utilities.errorHandlers import handle_errors
 from utilities.validators import *
 from utilities.resultFormat import print_format
 from constants.Constants import ANALYTICS
+from storage.converter import Converter
 
 class Expense_Manager:
     def __init__(self, storage):
         self.storage = storage
         self.expenses = self.storage.load_expenses()
+        
     
     def add_expense(self):
         title = input("Enter your Expense Title: ")
@@ -92,3 +94,6 @@ Choose an option from below:
             for expense in self.expenses
             if expense.category.lower() == category.lower()
         ]
+
+    def convert_file(self):
+        Converter.convert(self.storage)

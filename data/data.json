@@ -10,5 +10,11 @@
         "amount": 15000.0,
         "category": "Travel",
         "date": "2026-10-4"
+    },
+    {
+        "title": "watch",
+        "amount": 5000.0,
+        "category": "Accessory",
+        "date": "2026-08-30"
     }
 ]

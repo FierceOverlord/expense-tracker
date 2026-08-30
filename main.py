@@ -4,8 +4,7 @@ from utilities.validators import get_choice
 from constants.Constants import METHODS
 from tkinter import filedialog
 
-
-filePath = filedialog.askopenfilename(
+source_path = filedialog.askopenfilename(
     title = "Open Expense File",
     filetypes=[
         ("Expense Files", "*.json *.csv"),
@@ -14,7 +13,7 @@ filePath = filedialog.askopenfilename(
     ]
 )
 
-storage = StorageFactory.create(filePath)
+storage = StorageFactory.create(source_path)
 
 manager = Expense_Manager(storage)
 
@@ -28,6 +27,7 @@ while True:
 4. Delete Expense
 5. Calculate Expenses
 6. Filter by category
+7. Convert / Export File
 """)
 
         try:
