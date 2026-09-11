@@ -89,3 +89,5 @@ class CSVStorage(Storage):
                         row["date"]
                     )
                 )
+
+        return expenses

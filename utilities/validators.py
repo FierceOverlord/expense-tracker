@@ -21,8 +21,6 @@ def get_choice(options, obj):
 
         if choice in options:
             method = getattr(obj, options[choice])
-            method()
-
-            break
+            return method()
         else:
             print("Please enter a valid option.")

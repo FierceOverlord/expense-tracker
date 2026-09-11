@@ -3,6 +3,7 @@ from manager.expense_manager import Expense_Manager
 from utilities.validators import get_choice
 from constants.Constants import METHODS
 from tkinter import filedialog
+from manager.presentation.presentation import display_result
 
 source_path = filedialog.askopenfilename(
     title = "Open Expense File",
@@ -32,8 +33,10 @@ while True:
 
         try:
         
-            get_choice(METHODS, manager)
+            result = get_choice(METHODS, manager)
 
+            display_result(result)
+                
         except ValueError as e:
             print(f"Error: {e}")
 

@@ -1,4 +1,6 @@
 from datetime import datetime
+from utilities.resultFormat import print_format
+
 
 class Analytics:
     def __init__(self, expenses):

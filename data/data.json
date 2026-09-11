@@ -16,5 +16,11 @@
         "amount": 5000.0,
         "category": "Accessory",
         "date": "2026-08-30"
+    },
+    {
+        "title": "Battery",
+        "amount": 2500.0,
+        "category": "Electronisc",
+        "date": "2026-09-02"
     }
 ]

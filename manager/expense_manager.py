@@ -7,6 +7,8 @@ from utilities.resultFormat import print_format
 from constants.Constants import ANALYTICS
 from storage.converter import Converter
 
+
+
 class Expense_Manager:
     def __init__(self, storage):
         self.storage = storage
@@ -26,7 +28,7 @@ class Expense_Manager:
         self.expenses.append(Expense(title, amount, category, date))
         self.storage.save_expenses(self.expenses)
 
-    @print_format
+    
     def view_expenses(self): 
         return self.expenses
         
@@ -85,7 +87,7 @@ Choose an option from below:
 
         return get_choice(ANALYTICS, analytics)
 
-    @print_format
+    
     def filter_by_category(self):
         category = input("Enter your category: ").lower()
 
