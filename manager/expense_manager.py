@@ -6,7 +6,7 @@ from utilities.validators import *
 from utilities.resultFormat import print_format
 from constants.Constants import ANALYTICS
 from storage.converter import Converter
-
+from visualization.charts import *
 
 
 class Expense_Manager:
@@ -99,3 +99,18 @@ Choose an option from below:
 
     def convert_file(self):
         Converter.convert(self.storage)
+
+    def visualize_by_category(self):
+        analytics = Analytics(self.expenses)
+        data = analytics.calculate_by_category()
+        plot_spending_by_category(data)
+
+    def visualize_by_month(self):
+        analytics = Analytics(self.expenses)
+        data = analytics.calculate_by_month_year()
+        plot_spending_by_month(data)
+
+    def visualize_distribution(self):
+        analytics = Analytics(self.expenses)
+        data = analytics.calculate_by_category()
+        plot_spending_distribution(data)

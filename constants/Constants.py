@@ -5,7 +5,10 @@ METHODS = {
     "4": "delete_expense",
     "5": "calculate_expenses",
     "6": "filter_by_category",
-    "7": "convert_file"
+    "7": "convert_file",
+    '8': "visualize_by_category",
+    "9": "visualize_by_month",
+    "10": "visualize_distribution",
 }
 
 ANALYTICS = {

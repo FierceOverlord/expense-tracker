@@ -26,7 +26,10 @@ def display_result(result):
     elif isinstance(result, dict):
         print_dictionary(result)
 
+    elif isinstance(result, (int, float)):
+        print(f"Total: {result}")
+
     else:
-        display_expense(result)
+        print(result)
 
 

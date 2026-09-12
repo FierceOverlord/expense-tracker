@@ -1,7 +1,7 @@
 def print_format(func):
-    def wrapper(self, *args, **kwargs):
+    def wrapper(*args, **kwargs):
 
-        expenses = func(self, *args, **kwargs)
+        expenses = func(*args, **kwargs)
 
 
         if not expenses:

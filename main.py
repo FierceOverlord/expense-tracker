@@ -29,6 +29,9 @@ while True:
 5. Calculate Expenses
 6. Filter by category
 7. Convert / Export File
+8. Visualize by Category
+9. Visualize by Month
+10. Visualize Distribution
 """)
 
         try:
